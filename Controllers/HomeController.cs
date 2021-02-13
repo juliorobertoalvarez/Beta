@@ -3,32 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
+using Beta.Models;
 
 namespace Beta.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult MyPage()
+
+        public ActionResult Index(String message ="")
         {
+            ViewBag.Message = message;
             return View();
         }
-        public ActionResult Index()
+        [HttpPost]
+        public ActionResult Login(string email, string password)
         {
-            return View();
+            if(!string.IsNullOrEmpty(email)&&!string.IsNullOrEmpty(password))
+            {
+                MonosabioDBEntities db = new MonosabioDBEntities();
+                var user = db.Usuarios.FirstOrDefault(e => e.email == email && e.contrasena == password);
+                //direferente que null
+                if(user != null)
+                {
+                    // encontramos usuario
+                    FormsAuthentication.SetAuthCookie(user.email, true);
+                    return RedirectToAction("Index","Profile");
+                   
+                }
+                else
+                {
+                    return RedirectToAction("Index", new { message = "Datos Invalidos" });
+                }
+            }
+            else
+            {
+                return RedirectToAction("Index", new { message = "Llena los campos para iniciar sesion" });
+            }
+
         }
 
-        public ActionResult About()
+        [Authorize]
+        public ActionResult Logout()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index");
         }
     }
 }
