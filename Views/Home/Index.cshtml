@@ -1,46 +1,63 @@
-﻿@{
+﻿@model Beta.Models.MonosabioDBEntities
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>MonoSabio</h1>
-    <p class="lead">Bienvendio a nuestra empresa.</p>
-</div>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/login/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css' />
+    <!--//webfonts-->
+</head>
+</html>
 
 <div class="container">
 
-    @{
-        if (!string.IsNullOrEmpty(ViewBag.Message))
-        {
-            //viene con valor
-            <div class="alert alert-warning">@ViewBag.Message</div>
-        }
-    }
-    
-
-        <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Welcome to Regna</h1>
-            <h2>We are team of talented designers making websites with Bootstrap</h2>
-            <a href="#about" class="btn-get-started">Get Started</a>
-        </div>
  
 
 
-    <form action="/Home/Login" method="post">
-        <div class="form-group">
-            <label>Ingresa tu Email</label>
-            <input type="text" name="email" value="" />
-        </div>
-        <div class="form-group">
-            <label>Ingresa tu Contrasena</label>
-            <input type="password" name="password" value="" />
-        </div>
-        <div class=" form-group">
-            <button>Iniciar Sesion</button>
+    <div class="main">
+        <form action="/Home/Login" method="post">
+            <form>
+                <h1><span>MonoSabios</span> <lable> Login </lable> </h1>
+                <div class="inset">
+                    <p>
+                        <label>Ingresa tu Email</label>
+                        <input type="text" name="email" value="" />
+                    </p>
+                    <p>
+                        <label>Ingresa tu Contrasena</label>
+                        <input type="password" name="password" value="" />
+                    </p>
+                </div>
 
+                <p class="p-container">
+                    <span><a href="#">Forgot password ?</a></span>
+                    <input type="submit" value="Iniciar">
+                </p>
+            </form>
+            @{
+
+                if (!string.IsNullOrEmpty(ViewBag.Message))
+                {
+                    //viene con valor
+                    <div class="alert alert-warning">@ViewBag.Message</div>
+                }
+            }
+</div>
+
+
+
+        <div class="copy-right">
+            <p ><a>JulioRobAlva</a></p>
         </div>
-
-    </form>
-
 
 </div>

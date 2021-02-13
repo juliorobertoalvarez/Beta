@@ -181,6 +181,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="login\css\style.css" />
+    <Content Include="login\images\bg.jpg" />
+    <Content Include="login\images\lo-bg.png" />
+    <Content Include="login\index.html" />
     <Content Include="Models\MonoSabioDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MonoSabioDBModel.Context.cs</LastGenOutput>
@@ -200,6 +204,7 @@
     <Content Include="Models\MonoSabioDBModel.edmx.diagram">
       <DependentUpon>MonoSabioDBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="login\images\Thumbs.db" />
     <None Include="Scripts\jquery-3.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
