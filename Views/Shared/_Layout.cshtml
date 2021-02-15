@@ -24,6 +24,9 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Usuarios", "Index", "Usuarios")</li>
+                        <li>@Html.ActionLink("Clientes", "Index", "tbl_cliente")</li>
+                        <li>@Html.ActionLink("Ciudades", "Index", "tbl_cuidad")</li>
+
                         <li><a href="/Home/Logout">Cerrar Sesion</a></li>
                     }
 

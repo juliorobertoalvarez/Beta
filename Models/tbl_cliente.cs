@@ -6,7 +6,7 @@
 //     Los cambios manuales en este archivo se sobrescribirán si se regenera el código.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace Beta.Models
 {
     using System;
@@ -14,14 +14,28 @@ namespace Beta.Models
     
     public partial class tbl_cliente
     {
+        [Required]
+        [Display(Name = "Id Cliente")]
         public int idcliente { get; set; }
+        [Required]
+        [Display(Name = "NIT")]
         public string nit { get; set; }
+        [Required]
+        [Display(Name = "Nombre del Cliente")]
         public string nombrecliente { get; set; }
+        [Required]
+        [Display(Name = "Direccion")]
         public string direccion { get; set; }
+        [Required]
+        [Display(Name = "Telefono")]
         public string telefono { get; set; }
+        [Required]
+        [Display(Name = "Fecha")]
         public Nullable<System.DateTime> fecha { get; set; }
+        [Required]
+        [Display(Name = "Id Ciudad")]
         public int idciudad { get; set; }
-    
+
         public virtual tbl_cuidad tbl_cuidad { get; set; }
     }
 }

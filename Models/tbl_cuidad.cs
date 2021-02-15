@@ -6,7 +6,7 @@
 //     Los cambios manuales en este archivo se sobrescribirán si se regenera el código.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace Beta.Models
 {
     using System;
@@ -19,13 +19,23 @@ namespace Beta.Models
         {
             this.tbl_cliente = new HashSet<tbl_cliente>();
         }
-    
+        [Required]
+        [Display(Name = "Id Ciudad")]
         public int idciudad { get; set; }
+        [Required]
+        [Display(Name = "Nombre de la Ciudad")]
         public string nombreciudad { get; set; }
+
+        [Required]
+        [Display(Name = "Tamaño")]
         public string tamano { get; set; }
+        [Required]
+        [Display(Name = "Indice de Robos Anual")]
         public string indice { get; set; }
+        [Required]
+        [Display(Name = "Ingreso promedio mensual de sus ciudadanos")]
         public string ingreso { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_cliente> tbl_cliente { get; set; }
     }

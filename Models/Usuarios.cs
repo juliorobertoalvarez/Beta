@@ -6,7 +6,7 @@
 //     Los cambios manuales en este archivo se sobrescribirán si se regenera el código.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ComponentModel.DataAnnotations;
 namespace Beta.Models
 {
     using System;
@@ -14,10 +14,20 @@ namespace Beta.Models
     
     public partial class Usuarios
     {
+        [Required]
+        [Display(Name = "Id Usuario")]
         public long idUsuario { get; set; }
+        [Required]
+        [Display(Name = "Usuario")]
         public string usuario { get; set; }
+        [Required]
+        [Display(Name = "Contrasena")]
         public string contrasena { get; set; }
+        [Required]
+        [Display(Name = "Email")]
         public string email { get; set; }
+        [Required]
+        [Display(Name = "Telefono")]
         public Nullable<long> telefono { get; set; }
     }
 }
