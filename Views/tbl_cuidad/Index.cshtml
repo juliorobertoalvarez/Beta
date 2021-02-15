@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Beta.Models.tbl_cuidad>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tamano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ingreso)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tamano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ingreso)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idciudad }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idciudad }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idciudad })
+        </td>
+    </tr>
+}
+
+</table>

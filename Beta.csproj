@@ -240,16 +240,16 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Logout.cshtml" />
-    <Content Include="Views\tbl_cliente\Create.cshtml" />
-    <Content Include="Views\tbl_cliente\Delete.cshtml" />
-    <Content Include="Views\tbl_cliente\Details.cshtml" />
-    <Content Include="Views\tbl_cliente\Edit.cshtml" />
-    <Content Include="Views\tbl_cliente\Index.cshtml" />
     <Content Include="Views\tbl_cuidad\Create.cshtml" />
     <Content Include="Views\tbl_cuidad\Delete.cshtml" />
     <Content Include="Views\tbl_cuidad\Details.cshtml" />
     <Content Include="Views\tbl_cuidad\Edit.cshtml" />
     <Content Include="Views\tbl_cuidad\Index.cshtml" />
+    <Content Include="Views\tbl_cliente\Create.cshtml" />
+    <Content Include="Views\tbl_cliente\Delete.cshtml" />
+    <Content Include="Views\tbl_cliente\Details.cshtml" />
+    <Content Include="Views\tbl_cliente\Edit.cshtml" />
+    <Content Include="Views\tbl_cliente\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

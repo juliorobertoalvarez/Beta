@@ -1,0 +1,51 @@
+﻿@model Beta.Models.tbl_cuidad
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_cuidad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tamano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tamano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.indice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.indice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ingreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ingreso)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idciudad }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
